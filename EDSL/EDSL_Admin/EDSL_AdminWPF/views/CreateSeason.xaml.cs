@@ -43,5 +43,10 @@ namespace EDSL_AdminWPF.views
             DataBase.AddSeason(StartDate.DisplayDate, dates, int.Parse(SeasonLength.Text));
             adminHomePage.adminPage.frame_ContentArea.Content = new Seasons_Draws();
         }
+
+        private void btn_Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            adminHomePage.adminPage.frame_ContentArea.Content = new Seasons_Draws();
+        }
     }
 }

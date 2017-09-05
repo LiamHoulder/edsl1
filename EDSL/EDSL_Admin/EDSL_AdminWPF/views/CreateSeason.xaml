@@ -13,7 +13,7 @@
         <Calendar x:Name="StartDate" HorizontalAlignment="Left" Margin="121,26,0,0" VerticalAlignment="Top" Width="193"/>
         <Label Content="Length:" HorizontalAlignment="Left" Margin="36,330,0,0" VerticalAlignment="Top" Width="80" Height="29"/>
         <TextBox x:Name="SeasonLength" HorizontalAlignment="Left" Height="23" Margin="121,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="TextBox_PreviewTextInput"/>
-        <Button x:Name="btn_GenerateSeason" Content="Generate" HorizontalAlignment="Left" Margin="768,635,0,0" VerticalAlignment="Top" Width="75" Click="btn_GenerateSeason_Click"/>
+        <Button x:Name="btn_GenerateSeason" Content="Generate" HorizontalAlignment="Left" Margin="780,555,0,0" VerticalAlignment="Top" Width="75" Click="btn_GenerateSeason_Click"/>
         <Label Content="Holidays" HorizontalAlignment="Left" Margin="520,22,0,0" VerticalAlignment="Top" Width="89"/>
         <ListView x:Name="list_Holiday" HorizontalAlignment="Left" Height="401" Margin="628,10,0,0" VerticalAlignment="Top" Width="227">
             <ListView.View>
@@ -23,5 +23,6 @@
             </ListView.View>
         </ListView>
         <Button x:Name="btn_AddHoliday" Content="Add" HorizontalAlignment="Left" Margin="520,53,0,0" VerticalAlignment="Top" Width="75" Click="btn_AddHoliday_Click"/>
+        <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="628,555,0,0" VerticalAlignment="Top" Width="75" Click="btn_Cancel_Click"/>
     </Grid>
 </Page>

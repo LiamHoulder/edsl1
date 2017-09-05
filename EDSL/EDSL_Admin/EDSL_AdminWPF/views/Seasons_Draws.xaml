@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:EDSL_AdminWPF.views"
       xmlns:EDSL_AdminWPF="clr-namespace:EDSL_AdminWPF" x:Class="EDSL_AdminWPF.views.Seasons_Draws"
       mc:Ignorable="d" 
-      d:DesignHeight="679" d:DesignWidth="865"
+      d:DesignHeight="680" d:DesignWidth="865"
       Title="Seasons_Draws">
 
     <Grid Background="White">
