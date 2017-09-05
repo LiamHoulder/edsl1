@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDSL_API", "EDSL_API\EDSL_API.csproj", "{7F5DADFD-E13C-4B00-BCEF-989601385E86}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database1", "..\..\..\Visual Studio 2013\Projects\Database1\Database1\Database1.sqlproj", "{AAA8FEB1-801F-44D4-A483-A0A426381083}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EDSL_Database", "EDSL_Database\Database1\EDSL_Database.sqlproj", "{AAA8FEB1-801F-44D4-A483-A0A426381083}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDSL_AdminWPF", "..\..\..\..\Downloads\edsl1-EDSL_adminWPF\edsl1-EDSL_adminWPF\EDSL_Admin\EDSL_AdminWPF\EDSL_AdminWPF.csproj", "{782F9A3C-D528-4650-8525-CA2CE4958544}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDSL_AdminWPF", "EDSL_Admin\EDSL_AdminWPF\EDSL_AdminWPF.csproj", "{782F9A3C-D528-4650-8525-CA2CE4958544}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
