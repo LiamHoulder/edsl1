@@ -18,7 +18,7 @@
         <Button Content="Search:" HorizontalAlignment="Left" Margin="810,2,0,0" VerticalAlignment="Top" Width="49" Height="34" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Panel.ZIndex="5" RenderTransformOrigin="-1.714,0.706"/>
         <Button Content="Round results" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="215" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" Panel.ZIndex="5" FontSize="20"/>
         <Button Content="Divisions" HorizontalAlignment="Left" Margin="0,300,0,0" VerticalAlignment="Top" Width="215" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Panel.ZIndex="5" FontSize="20"/>
-        <Button Content="Clubs" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="215" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Panel.ZIndex="5" FontSize="20"/>
+        <Button x:Name="btn_Clubs" Content="Clubs" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="215" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Panel.ZIndex="5" FontSize="20" Click="btn_Clubs_Click"/>
         <Rectangle Fill="White" HorizontalAlignment="Left" Height="40" Stroke="White" VerticalAlignment="Top" Width="1080" Panel.ZIndex="3">
             <Rectangle.Effect>
                 <DropShadowEffect ShadowDepth="0" BlurRadius="50" Opacity="0.4"/>

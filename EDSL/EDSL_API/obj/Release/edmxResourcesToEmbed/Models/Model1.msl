@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EDSL1DatabaseModelStoreContainer" CdmEntityContainer="EDSL1DatabaseEntities1">
+  <EntityContainerMapping StorageEntityContainer="EDSL1DatabaseModelStoreContainer" CdmEntityContainer="EDSL1DatabaseEntities">
+    <EntitySetMapping Name="C__RefactorLog">
+      <EntityTypeMapping TypeName="EDSL1DatabaseModel.C__RefactorLog">
+        <MappingFragment StoreEntitySet="__RefactorLog">
+          <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Clubs">
       <EntityTypeMapping TypeName="EDSL1DatabaseModel.Club">
         <MappingFragment StoreEntitySet="Clubs">
@@ -24,6 +31,15 @@
           <ScalarProperty Name="divCode" ColumnName="divCode" />
           <ScalarProperty Name="divGrade" ColumnName="divGrade" />
           <ScalarProperty Name="sponsor" ColumnName="sponsor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Draws">
+      <EntityTypeMapping TypeName="EDSL1DatabaseModel.Draw">
+        <MappingFragment StoreEntitySet="Draw">
+          <ScalarProperty Name="drawID" ColumnName="drawID" />
+          <ScalarProperty Name="seasonCode" ColumnName="seasonCode" />
+          <ScalarProperty Name="numRounds" ColumnName="numRounds" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

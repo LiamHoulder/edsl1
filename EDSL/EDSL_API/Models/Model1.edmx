@@ -5,6 +5,12 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="EDSL1DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
         <EntityType Name="Clubs">
           <Key>
             <PropertyRef Name="clubCode" />
@@ -28,6 +34,14 @@
           <Property Name="divCode" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="divGrade" Type="char" MaxLength="10" />
           <Property Name="sponsor" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Draw">
+          <Key>
+            <PropertyRef Name="drawID" />
+          </Key>
+          <Property Name="drawID" Type="int" Nullable="false" />
+          <Property Name="seasonCode" Type="int" />
+          <Property Name="numRounds" Type="int" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -103,8 +117,10 @@
           <Property Name="teamName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="EDSL1DatabaseModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clubs" EntityType="Self.Clubs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Divisions" EntityType="Self.Divisions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Draw" EntityType="Self.Draw" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Game" EntityType="Self.Game" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="league" EntityType="Self.league" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Player" EntityType="Self.Player" Schema="dbo" store:Type="Tables" />
@@ -117,6 +133,12 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EDSL1DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
         <EntityType Name="Club">
           <Key>
             <PropertyRef Name="clubCode" />
@@ -140,6 +162,14 @@
           <Property Name="divCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="divGrade" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="sponsor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Draw">
+          <Key>
+            <PropertyRef Name="drawID" />
+          </Key>
+          <Property Name="drawID" Type="Int32" Nullable="false" />
+          <Property Name="seasonCode" Type="Int32" />
+          <Property Name="numRounds" Type="Int32" />
         </EntityType>
         <EntityType Name="Game">
           <Key>
@@ -214,9 +244,11 @@
           <Property Name="Club" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="teamName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="EDSL1DatabaseEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EDSL1DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
           <EntitySet Name="Clubs" EntityType="Self.Club" />
           <EntitySet Name="Divisions" EntityType="Self.Division" />
+          <EntitySet Name="Draws" EntityType="Self.Draw" />
           <EntitySet Name="Games" EntityType="Self.Game" />
           <EntitySet Name="leagues" EntityType="Self.league" />
           <EntitySet Name="Players" EntityType="Self.Player" />
@@ -229,7 +261,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EDSL1DatabaseModelStoreContainer" CdmEntityContainer="EDSL1DatabaseEntities1">
+        <EntityContainerMapping StorageEntityContainer="EDSL1DatabaseModelStoreContainer" CdmEntityContainer="EDSL1DatabaseEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="EDSL1DatabaseModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Clubs">
             <EntityTypeMapping TypeName="EDSL1DatabaseModel.Club">
               <MappingFragment StoreEntitySet="Clubs">
@@ -253,6 +292,15 @@
                 <ScalarProperty Name="divCode" ColumnName="divCode" />
                 <ScalarProperty Name="divGrade" ColumnName="divGrade" />
                 <ScalarProperty Name="sponsor" ColumnName="sponsor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Draws">
+            <EntityTypeMapping TypeName="EDSL1DatabaseModel.Draw">
+              <MappingFragment StoreEntitySet="Draw">
+                <ScalarProperty Name="drawID" ColumnName="drawID" />
+                <ScalarProperty Name="seasonCode" ColumnName="seasonCode" />
+                <ScalarProperty Name="numRounds" ColumnName="numRounds" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

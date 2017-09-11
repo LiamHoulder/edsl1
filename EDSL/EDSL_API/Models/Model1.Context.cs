@@ -13,10 +13,10 @@ namespace EDSL_API.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EDSL1DatabaseEntities1 : DbContext
+    public partial class EDSL1DatabaseEntities : DbContext
     {
-        public EDSL1DatabaseEntities1()
-            : base("name=EDSL1DatabaseEntities1")
+        public EDSL1DatabaseEntities()
+            : base("name=EDSL1DatabaseEntities")
         {
         }
     
@@ -25,8 +25,10 @@ namespace EDSL_API.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__RefactorLog> C__RefactorLog { get; set; }
         public virtual DbSet<Club> Clubs { get; set; }
         public virtual DbSet<Division> Divisions { get; set; }
+        public virtual DbSet<Draw> Draws { get; set; }
         public virtual DbSet<Game> Games { get; set; }
         public virtual DbSet<league> leagues { get; set; }
         public virtual DbSet<Player> Players { get; set; }

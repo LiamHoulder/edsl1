@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EDSL1DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
   <EntityType Name="Club">
     <Key>
       <PropertyRef Name="clubCode" />
@@ -23,6 +29,14 @@
     <Property Name="divCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="divGrade" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="sponsor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Draw">
+    <Key>
+      <PropertyRef Name="drawID" />
+    </Key>
+    <Property Name="drawID" Type="Int32" Nullable="false" />
+    <Property Name="seasonCode" Type="Int32" />
+    <Property Name="numRounds" Type="Int32" />
   </EntityType>
   <EntityType Name="Game">
     <Key>
@@ -97,9 +111,11 @@
     <Property Name="Club" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="teamName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="EDSL1DatabaseEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="EDSL1DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
     <EntitySet Name="Clubs" EntityType="Self.Club" />
     <EntitySet Name="Divisions" EntityType="Self.Division" />
+    <EntitySet Name="Draws" EntityType="Self.Draw" />
     <EntitySet Name="Games" EntityType="Self.Game" />
     <EntitySet Name="leagues" EntityType="Self.league" />
     <EntitySet Name="Players" EntityType="Self.Player" />

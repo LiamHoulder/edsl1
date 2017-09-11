@@ -14,14 +14,21 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btn_AddSeason" Content="Add Season" HorizontalAlignment="Left" Margin="721,85,0,0" VerticalAlignment="Top" Width="76" Height="20" Grid.Column="1" Click="btn_AddSeason_Click"/>
-        <ListView x:Name="SeasonsList" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Margin="71,46,0,0" VerticalAlignment="Top" Width="421" BorderBrush="{x:Null}">
+        <Button x:Name="btn_AddSeason" Content="Create Season" HorizontalAlignment="Left" Margin="711,119,0,0" VerticalAlignment="Top" Width="105" Height="20" Grid.Column="1" Click="btn_AddSeason_Click"/>
+        <ListView x:Name="SeasonsList" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="100" Margin="61,85,0,0" VerticalAlignment="Top" Width="645" BorderBrush="{x:Null}" SelectionChanged="SeasonsList_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Season Code" Width="80" DisplayMemberBinding="{Binding seasonCode}"/>
+                    <GridViewColumn Header="Season Year" Width="90" DisplayMemberBinding="{Binding seasonYear}"/>
+                    <GridViewColumn Header="Start Date" Width="120" DisplayMemberBinding="{Binding startDate}"/>
+                    <GridViewColumn Header="Rounds" Width="90" DisplayMemberBinding="{Binding numRounds}"/>
+                    <GridViewColumn Header="Breaks" Width="120" DisplayMemberBinding="{Binding nonPlayWeeks}"/>
+                    <GridViewColumn Header="End Date" Width="120" DisplayMemberBinding="{Binding endDate}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label x:Name="NoSeasons_msg" Content="There are currently no seasons set up. Click add season" Grid.ColumnSpan="2" Margin="80,74,390,579" Opacity="0"/>
+        <Label x:Name="NoSeasons_msg" Content="There are currently no seasons set up. Click add season" Grid.ColumnSpan="2" Margin="70,113,400,540" Opacity="0"/>
+        <Button x:Name="btn_Edit" Grid.ColumnSpan="2" Content="Edit Season" HorizontalAlignment="Left" Margin="711,144,0,0" VerticalAlignment="Top" Width="105" IsEnabled="False" Click="Button_Click"/>
+        <Label Grid.ColumnSpan="2" Content="SEASON" HorizontalAlignment="Left" Margin="70,44,0,0" VerticalAlignment="Top" Width="223"/>
     </Grid>
 </Page>

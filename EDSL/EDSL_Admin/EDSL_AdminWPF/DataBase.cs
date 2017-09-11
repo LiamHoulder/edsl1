@@ -6,31 +6,28 @@ using System.Threading.Tasks;
 
 namespace EDSL_AdminWPF
 {
-    public struct Date
+    public class Club
     {
-        int day;
-        int month;
-        int year;
+        public string clubCode { get; set; }
+        public string clubName { get; set; }
+        public string contactName { get; set; }
+        public string contactSurname { get; set; }
+        public string Gender { get; set; }
+        public string AddressLine1 { get; set; }
+        public Nullable<int> Postcode { get; set; }
+        public string State { get; set; }
+        public string Suburb { get; set; }
+        public string homePhone { get; set; }
+        public Nullable<int> firstRegistered { get; set; }
     }
 
-    public struct Season
+    public class Season
     {
-        public DateTime StartDate;
-        public DateTime[] Holidays;
-        public int Length;
-    }
-
-    public static class DataBase
-    {
-        public static List<Season> Seasons = new List<Season>();
-
-        public static void AddSeason(DateTime start, DateTime[] holidays, int length)
-        {
-            Season toAdd = new Season();
-            toAdd.Length = length;
-            toAdd.StartDate = start;
-            toAdd.Holidays = holidays;
-            Seasons.Add(toAdd);
-        }
+        public int seasonCode { get; set; }
+        public Nullable<int> seasonYear { get; set; }
+        public Nullable<int> startDate { get; set; }
+        public Nullable<int> numRounds { get; set; }
+        public string nonPlayWeeks { get; set; }
+        public Nullable<int> endDate { get; set; }
     }
 }

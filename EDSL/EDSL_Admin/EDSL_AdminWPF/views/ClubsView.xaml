@@ -1,0 +1,33 @@
+﻿<Page x:Class="EDSL_AdminWPF.views.ClubsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EDSL_AdminWPF.views"
+      mc:Ignorable="d" 
+      d:DesignHeight="679" d:DesignWidth="865"
+      Title="ClubsView">
+
+    <Grid>
+        <ListView x:Name="list_Clubs" HorizontalAlignment="Left" Height="508" Margin="22,21,0,0" VerticalAlignment="Top" Width="822" SelectionChanged="list_Clubs_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Club Code" Width="80" DisplayMemberBinding="{Binding clubCode}"/>
+                    <GridViewColumn Header="Club Name" Width="120" DisplayMemberBinding="{Binding clubName}"/>
+                    <GridViewColumn Header="Contact Name" Width="120" DisplayMemberBinding="{Binding contactName}"/>
+                    <GridViewColumn Header="Contact Surname" Width="120" DisplayMemberBinding="{Binding contactSurname}"/>
+                    <GridViewColumn Header="Gender" Width="80" DisplayMemberBinding="{Binding Gender}"/>
+                    <GridViewColumn Header="Address 1" Width="150" DisplayMemberBinding="{Binding AddressLine1}"/>
+                    <GridViewColumn Header="Post Code" Width="70" DisplayMemberBinding="{Binding Postcode}"/>
+                    <GridViewColumn Header="State" Width="50" DisplayMemberBinding="{Binding State}"/>
+                    <GridViewColumn Header="Suburb" Width="120" DisplayMemberBinding="{Binding Suburb}"/>
+                    <GridViewColumn Header="Phone" Width="120" DisplayMemberBinding="{Binding homePhone}"/>
+                    <GridViewColumn Header="Registered year" Width="120" DisplayMemberBinding="{Binding firstRegistered}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btn_Edit" Content="Edit" HorizontalAlignment="Left" Margin="689,534,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_New" Content="New" HorizontalAlignment="Left" Margin="769,534,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Page>

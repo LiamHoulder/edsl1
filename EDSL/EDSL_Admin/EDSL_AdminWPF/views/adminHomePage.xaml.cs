@@ -43,5 +43,10 @@ namespace EDSL_AdminWPF.views
         {
             frame_ContentArea.Navigate(new Page());
         }
+
+        private void btn_Clubs_Click(object sender, RoutedEventArgs e)
+        {
+            frame_ContentArea.Navigate(new ClubsView());
+        }
     }
 }
