@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Liam Houlder\Documents\GitHub\edsl1\EDSL\EDSL_API\Models\Model_Club.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Liam\Documents\GitHub\edsl1\EDSL\EDSL_API\Models\Model_Club.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

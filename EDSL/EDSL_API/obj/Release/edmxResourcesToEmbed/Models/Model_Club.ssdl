@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EDSL1DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clubs">
+    <Key>
+      <PropertyRef Name="clubCode" />
+    </Key>
+    <Property Name="clubCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="clubName" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactName" Type="nvarchar" MaxLength="200" />
+    <Property Name="contactSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="char" MaxLength="10" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="int" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="homePhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstRegistered" Type="int" />
+  </EntityType>
+  <EntityContainer Name="EDSL1DatabaseModelStoreContainer">
+    <EntitySet Name="Clubs" EntityType="Self.Clubs" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

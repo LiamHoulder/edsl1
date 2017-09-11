@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EDSL1DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Club">
+    <Key>
+      <PropertyRef Name="clubCode" />
+    </Key>
+    <Property Name="clubCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="clubName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="contactSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Postcode" Type="Int32" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="homePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstRegistered" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="EDSL1DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clubs" EntityType="Self.Club" />
+  </EntityContainer>
+</Schema>
