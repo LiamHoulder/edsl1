@@ -125,3 +125,6 @@ C:\Users\Liam\Documents\GitHub\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.csprojRe
 C:\Users\Liam\Documents\GitHub\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.csproj.CoreCompileInputs.cache
 C:\Users\Liam\Documents\GitHub\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.dll
 C:\Users\Liam\Documents\GitHub\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.pdb
+D:\Users\Max\Documents\UniWork\EDSL\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.csprojResolveAssemblyReference.cache
+D:\Users\Max\Documents\UniWork\EDSL\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.dll
+D:\Users\Max\Documents\UniWork\EDSL\edsl1\EDSL\EDSL_API\obj\Release\EDSL_API.pdb
